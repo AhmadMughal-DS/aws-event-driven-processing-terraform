@@ -3,9 +3,10 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project   = var.project_name
-      ManagedBy = "Terraform"
-      Owner     = "Muhammad Ahmad"
+      Project     = var.project_name
+      Environment = var.environment
+      ManagedBy   = "Terraform"
+      Owner       = "Muhammad Ahmad"
     }
   }
 }

@@ -1,14 +1,9 @@
 output "uploads_bucket" {
-  description = "Upload objects here to trigger processing"
-  value       = aws_s3_bucket.uploads.id
+  value = module.pipeline.uploads_bucket
 }
-
 output "queue_url" {
-  description = "SQS queue URL"
-  value       = aws_sqs_queue.queue.id
+  value = module.pipeline.queue_url
 }
-
 output "dynamodb_table" {
-  description = "Table where object metadata is written"
-  value       = aws_dynamodb_table.objects.name
+  value = module.pipeline.dynamodb_table
 }
